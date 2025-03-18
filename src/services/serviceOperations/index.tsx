@@ -1,3 +1,4 @@
+import { todoProps } from "@/types/type";
 import { prisma } from "@/utils/prisma";
 
 // GET ALL
@@ -15,7 +16,7 @@ export async function getAllData() {
 }
 
 // POST
-export async function createNewData(newData: any) {
+export async function createNewData(newData: todoProps) {
   try {
     const data = await prisma.todo.create({ data: newData });
     return data;

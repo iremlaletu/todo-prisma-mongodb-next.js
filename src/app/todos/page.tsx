@@ -58,9 +58,7 @@ export default function TodoListPage() {
   return (
     <div className="flex flex-col  items-center p-4 min-h-screen">
       <div className="w-full max-w-4xl">
-        <h1 className="text-2xl font-bold mb-4 text-center">
-          Your To Do's List
-        </h1>
+        <h1 className="text-2xl font-bold mb-4 text-center">Your To Do List</h1>
 
         {loading ? (
           <p>Loading...</p>

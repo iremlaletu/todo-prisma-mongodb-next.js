@@ -43,7 +43,7 @@ export default function Home() {
       <div className="flex justify-center flex-col items-center w-full">
         <div className="flex flex-col gap-5 items-center justify-center mt-10 max-w-4xl w-full">
           <Link href="/create" className="p-2 border-2">
-            Add New To Do's
+            Add New To Do
           </Link>
 
           {loading ? (

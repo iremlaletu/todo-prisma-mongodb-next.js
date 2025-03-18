@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
  // Prisma fonksiyonlarını import et
 
 // GET 
-export async function GET(req: Request) {
+export async function GET() {
   try {
     const todos = await getAllData();
     // prismaya istek burdan atılıyor
