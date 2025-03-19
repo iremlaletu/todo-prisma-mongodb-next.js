@@ -6,7 +6,10 @@ import { useEffect, useState } from "react";
 import { LuExternalLink } from "react-icons/lu";
 import { formatDate } from "@/utils/formatDate";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? process.env.NEXT_PUBLIC_API_URL
+    : "/api";
 
 export default function Home() {
   const [todos, setTodos] = useState<todoProps[]>([]); // todo listesi
@@ -16,6 +19,9 @@ export default function Home() {
     async function fetchTodos() {
       // istek app/api/todos'a atılıyor ordan prismaya bağlanıyor
       const res = await fetch(`${API_URL}/todos`, {
+        // aslında API_URL gerek yoktur
+        // zaten istekleri /api/todos üzerinden olduğu için next.js bunu otomatik yapar bu route için
+
         cache: "no-store",
       });
 
@@ -33,9 +39,7 @@ export default function Home() {
 
   return (
     <div className="flex justify-center flex-col items-center py-10 w-full">
-      <span className="text-5xl font-extrabold uppercase">
-        Medyanes 360 Case Study
-      </span>
+      <span className="text-5xl font-extrabold uppercase">Case Study</span>
       <h1 className="text-3xl font-extrabold uppercase mb-5 text-center">
         Todo App with Prisma - MongoDB
       </h1>

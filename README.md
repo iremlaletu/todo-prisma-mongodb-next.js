@@ -1,4 +1,16 @@
-Next.js, Prisma ve MongoDB kullanarak bir Todo List uygulaması
+Next.js, Prisma ve MongoDB kullanarak bir Todo List uygulaması - Case
+
+- `lib/handlers` üzerinden işlemler başlar. Burada, `api/todos`'a istek atılır ve ordanda Prisma'ya bağlanır.
+
+- Prisma methodları (createNewData, deleteDataById, getAllData, updateDataById) `services/serviceOperations`da tanımlıdır.
+
+- Home Page'de `Add New To Do` butona basılınca `/create` sayfasına gider. Burada submit olunca `/todos` pathına giderek listelenir.
+
+- Diğer bir listeleme Home Page'de de vardır.
+
+- Bu taskda Typescript ve TailwindCss kullanıldı.
+
+- Vercel ile deploy edildi -> https://todo-case-study.vercel.app/
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
