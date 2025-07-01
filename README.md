@@ -1,4 +1,4 @@
-Next.js, Prisma ve MongoDB kullanarak bir Todo List uygulaması - Case
+Next.js, Prisma ve MongoDB kullanarak bir Todo List uygulaması - Case Study
 
 - `lib/handlers` üzerinden işlemler başlar. Burada, `api/todos`'a istek atılır ve ordanda Prisma'ya bağlanır.
 
